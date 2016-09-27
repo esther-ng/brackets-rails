@@ -1,4 +1,20 @@
 class EntriesController < ApplicationController
+
+  def new; end
+
+  def create
+    # puts "HERE IS THE FORM DATA #{ params }"
+    # HERE IS WHERE WE WOULD SAVE TO THE DATABASE
+    new_entry = {
+      title: params[:title],
+      description: params[:description]
+    }
+    puts "MY NEW OBJECT IS #{ new_entry }"
+
+    redirect_to entries_path
+    # render :index
+  end
+
   def index
     # Shows all entries in the database
     @entry = "Waterfalls are pretty and wet."

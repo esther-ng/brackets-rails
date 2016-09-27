@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'entries#index'
   get '/entries' => 'entries#index'
-  get '/entries/:id/authors/:author' => 'entries#show'
+  get '/entries/new' => 'entries#new'
+  get '/entries/:id' => 'entries#show'
+  
+  post '/entries' => 'entries#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
