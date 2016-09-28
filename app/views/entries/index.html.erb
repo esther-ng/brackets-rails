@@ -4,7 +4,33 @@
 </p>
 <p>
   <% @mini_entries.each do |e| %>
-    <p><%= e %></p>
+  <p><%= e %></p>
   <% end %>
-  
+
 </p>
+
+<h2>
+  <%= "this is some text" %>
+</h2>
+
+<%= content_tag(:section) do
+  content_tag(:p) do %>
+    <%=
+    "line one"
+    "line two"
+    "Hello from a content tag!"
+    %>
+
+
+    <%= button_to "Press me" %>
+  <% end
+end %>
+
+<%= image_tag("http://www.fillmurray.com/700/700",
+{
+  :alt => @alt,
+  # This is pretty bad form - you should
+  # use CSS for width/height!
+  :height => @height,
+  :width => @width,
+  }) %>

@@ -1,6 +1,8 @@
 class EntriesController < ApplicationController
 
-  def new; end
+  def new
+    @alt = "the alt text"
+  end
 
   def create
     # puts "HERE IS THE FORM DATA #{ params }"
@@ -23,6 +25,10 @@ class EntriesController < ApplicationController
         "ERB means embedded ruby - WHOA",
         "Boots and pants and boots and pants"
       ]
+
+    @alt = "Bill Murray"
+    @height = 200
+    @width = 200
     # render :index
   end
 

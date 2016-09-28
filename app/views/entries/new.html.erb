@@ -11,3 +11,22 @@
 
   <input type="submit" value="Submit">
 </form>
+
+<%= link_to("Back to the List", entries_path,
+        {
+          :class => "return-link",
+          :alt => @alt,
+        } ) %>
+
+<!--
+
+anything in here
+
+is a comment
+-->
+
+<%# These all do the same thing:
+:symbol => "value"
+symbol: value
+{ :symbol => "value", }
+%>
