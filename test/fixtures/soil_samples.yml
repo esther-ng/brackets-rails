@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  scientist: MyString
+  collection_date: 2016-09-28
+  is_wet: false
+  density: 1
+
+two:
+  location: MyString
+  scientist: MyString
+  collection_date: 2016-09-28
+  is_wet: false
+  density: 1
