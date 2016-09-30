@@ -1,9 +1,25 @@
 Rails.application.routes.draw do
+  get 'soil_samples/' => 'soil_samples#index'
+
+  get 'soil_samples/:id', to: 'soil_samples#show', as: 'soil_sample'
+
+  get 'soil_samples/new' => 'soil_samples#new'
+
+  post 'soil_samples' => 'soil_samples#create'
+
+  get 'soil_samples/:id/edit', to: 'soil_samples#edit', as: 'soil_sample_edit'
+  patch 'soil_samples/:id' => 'soil_samples#update'
+
+  # get 'soil_samples/:id/destroy', to: 'soil_samples#confirm_deletion', as: 'soil_sample_destroy' 
+  delete 'soil_samples/:id' => 'soil_samples#destroy'
+
+
+
   root 'entries#index'
   get '/entries' => 'entries#index'
   get '/entries/new' => 'entries#new'
   get '/entries/:id' => 'entries#show'
-  
+
   post '/entries' => 'entries#create'
 
 

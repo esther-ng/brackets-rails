@@ -1,0 +1,27 @@
+<%= form_for @sample do |f| %>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+
+  <%= f.label :scientist %>
+  <%= f.text_field :scientist %>
+
+  <%= f.label :is_wet %>
+  <%= f.check_box :is_wet %>
+
+  <%= f.submit "Submit" %>
+<% end %>
+
+
+<!-- <form action="/soil_samples" method="post" accept-charset="utf-8">
+  <! SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+  <!-- <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+
+  <label for="location">Location</label>
+  <input type="text" name="location" value="" id="location">
+
+  <label for="scientist">Scientist</label>
+  <input type="text" name="scientist" value="" id="scientist">
+
+  <input type="submit" value="Submit"> -->
+<!-- </form> -->

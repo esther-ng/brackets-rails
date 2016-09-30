@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160928165304) do
+ActiveRecord::Schema.define(version: 20160929202552) do
+
+  create_table "post_offices", force: :cascade do |t|
+    t.string   "name",          null: false
+    t.string   "location"
+    t.integer  "num_employees"
+    t.datetime "created_at",    null: false
+    t.datetime "udpated_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "soil_samples", force: :cascade do |t|
     t.string   "location"
@@ -22,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160928165304) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "color"
+    t.string   "some_column"
   end
 
 end

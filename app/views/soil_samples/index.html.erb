@@ -1,0 +1,12 @@
+<h1>SoilSamples</h1>
+
+<% @samples.each do |s| %>
+  <p>
+    <%= describe s %>
+    <%= link_to "Find it here", soil_sample_path(s) %>
+    <%= link_to "Edit", soil_sample_edit_path(s) %>
+    <%= link_to "Destroy", soil_sample_path(s), method: :delete, data: { confirm: "Are you really sure?"} %>
+  </p>
+<% end %>
+
+<p>Find me in app/views/soil_samples/index.html.erb</p>
